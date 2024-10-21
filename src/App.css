@@ -1,38 +1,593 @@
-.App {
-  text-align: center;
+body,
+html {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  scroll-behavior: smooth;
+  background-color: #f0f2f5;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: rgba(51, 51, 51, 0.85);
+  padding: 15px;
+  z-index: 1000;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.navbar ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  margin: 0;
+  padding: 0;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.navbar ul li {
+  position: relative;
+}
+
+.navbar ul li a,
+.milestone-dropdown li a {
+  color: #ffffff;
+  text-decoration: none;
+  cursor: pointer;
+  padding: 10px 20px;
+  transition: color 0.3s ease, background-color 0.3s ease;
+  display: inline-block;
+  border-radius: 10px;
+  font-size: 1rem;
+}
+
+.navbar ul li a:hover,
+.milestone-dropdown li a:hover {
+  color: #f0f2f5;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.milestone-menu-button {
+  background-color: transparent;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  font-size: 1rem;
+}
+
+.milestone-menu-button:hover {
+  color: #ffeb3b;
+}
+
+.milestone-dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #333;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   display: flex;
   flex-direction: column;
-  align-items: center;
+}
+
+.milestone-dropdown li {
+  padding: 5px 0;
+}
+
+.section {
+  min-height: 100vh;
+  padding: 80px 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.home {
+  background: url('assets/cover.jpg') no-repeat center center/cover;
+  position: relative;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.cover-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 3.5em;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 30px;
+  border-radius: 25px;
+  animation: fadeInZoom 2s ease-out;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@keyframes fadeInZoom {
+  0% {
+    transform: translate(-50%, -80%) scale(0.8);
+    opacity: 0;
   }
-  to {
-    transform: rotate(360deg);
+
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+}
+
+.domain-subsection {
+  margin: 20px 0;
+  padding: 25px;
+  background-color: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  animation: fadeInUp 1.5s ease-in-out;
+}
+
+@keyframes fadeInUp {
+  0% {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.milestone-card {
+  margin: 30px 0;
+  padding: 30px;
+  background-color: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.4s ease;
+  animation: fadeIn 1.5s ease-in-out;
+  position: relative;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.milestone-card:hover {
+  transform: scale(1.05);
+}
+
+.timeline {
+  position: relative;
+  margin: 20px 0;
+  padding-left: 40px;
+  border-left: 4px solid #333;
+  transition: all 0.5s ease;
+}
+
+.milestone-card::before {
+  content: "";
+  position: absolute;
+  left: -25px;
+  top: 20px;
+  width: 20px;
+  height: 20px;
+  background-color: #333;
+  border-radius: 50%;
+  transition: background-color 0.3s ease;
+}
+
+.milestone-card:hover::before {
+  background-color: #ffeb3b;
+}
+
+.document-list ul {
+  list-style: none;
+  padding: 0;
+}
+
+.document-list li {
+  margin: 15px 0;
+}
+
+.document-list a {
+  color: #0066cc;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  font-weight: bold;
+}
+
+.document-list a:hover {
+  color: #ff5722;
+}
+
+.slide-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.slide-links li {
+  margin: 15px 0;
+}
+
+.slide-links a {
+  color: #00796b;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  font-weight: bold;
+}
+
+.slide-links a:hover {
+  color: #d32f2f;
+}
+
+.group-members ul,
+.supervisors ul {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+}
+
+.member-photo {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.member-photo:hover {
+  transform: scale(1.1);
+}
+
+footer {
+  background-color: #333;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  font-size: 1.2rem;
+  margin-top: 40px;
+}
+
+@media (max-width: 768px) {
+  .navbar ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navbar ul li {
+    margin: 10px 0;
+  }
+
+  .cover-text {
+    font-size: 2.5em;
+  }
+}
+
+.methodology-diagram {
+  float: right;
+  width: 40%;
+  margin-left: 20px;
+  border: 5px solid #333;
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.methodology-diagram:hover {
+  transform: scale(1.05);
+}
+
+.domain-subsection {
+  overflow: hidden;
+  padding: 25px;
+  background-color: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  animation: fadeInUp 1.5s ease-in-out;
+}
+
+@keyframes fadeInUp {
+  0% {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.literature-survey-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  align-items: center;
+}
+
+/* Left section containing the two images */
+.left-section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  flex: 1;
+}
+
+/* Upper and lower sections inside the left section */
+.left-upper,
+.left-lower {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.survey-image {
+  max-width: 600px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+/* Right section with text */
+.right-section {
+  flex: 1;
+  text-align: justify;
+}
+
+/* Hover effect for the images */
+.survey-image:hover {
+  transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+
+  /* For mobile view, stack the sections vertically */
+  .literature-survey-container {
+    flex-direction: column;
+  }
+
+  .left-section {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.info-box {
+  display: flex;
+  align-items: center;
+  background-color: #d0e5ff;
+  border-radius: 15px;
+  padding: 20px;
+  max-width: 600px;
+}
+
+.info-box img {
+  width: 60px;
+  height: 60px;
+  margin-right: 15px;
+}
+
+.info-box p {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  color: #333;
+  text-align: left;
+}
+
+.literature-survey-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  align-items: center;
+}
+
+/* Left section containing the two images */
+.left-section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  flex: 1;
+}
+
+/* Right section with upper and lower parts */
+.right-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Upper part of right section */
+.right-upper {
+  font-size: 1rem;
+  text-align: justify;
+}
+
+/* Lower part of right section for references */
+.right-lower {
+  font-size: 0.8rem;
+  /* Smaller font size for references */
+  color: gray;
+}
+
+.references {
+  line-height: 1.5;
+}
+
+.research-objectives {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  background-color: #f5f5f5;
+}
+
+.objective {
+  display: flex;
+  align-items: flex-start;
+  border: 2px solid #00bfa5;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+  background-color: #ffffff;
+}
+
+.icon {
+  font-size: 24px;
+  color: #00bfa5;
+  margin-right: 15px;
+}
+
+.content {
+  flex: 1;
+}
+
+.objective-title {
+  font-size: 20px;
+  color: #333333;
+  margin: 0 0 10px;
+}
+
+.objective-description {
+  font-size: 16px;
+  color: #666666;
+  line-height: 1.6;
+}
+
+/* Container for the research gap section */
+.research-gap-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Upper section with left and right parts */
+.research-gap-upper {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  align-items: center;
+}
+
+/* Left section with image and text box */
+.research-gap-left,
+.research-gap-right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+}
+
+.gap-image {
+  max-width: 20%;
+  height: 20%;
+}
+
+/* Text box with title and description */
+.gap-text-box {
+  background-color: #d0e5ff;
+  padding: 15px;
+  border-radius: 10px;
+  margin-top: 10px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.gap-title {
+  font-weight: bold;
+  margin-bottom: 10px;
+  padding: 10px;
+}
+
+.gap-text-box p {
+  margin: 0;
+}
+
+.gap-each-desc {
+  text-align: justify;
+}
+
+.research-gap-lower {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 15px;
+}
+
+.research-gap-lower-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+}
+
+/* Hover effect for images */
+.gap-image:hover {
+  transform: scale(1.05);
+}
+
+/* Responsive layout for smaller screens */
+@media (max-width: 768px) {
+  .research-gap-upper {
+    flex-direction: column;
+  }
+}
+
+.research-problem-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Left section with image */
+.research-problem-left {
+  flex: 1;
+}
+
+.research-image {
+  max-width: 100%;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.research-image:hover {
+  transform: scale(1.05);
+}
+
+/* Right section with text in blue box */
+.research-problem-right {
+  flex: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.problem-text-box {
+  background-color: #d0e5ff;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: justify;
+  max-width: 100%;
+  line-height: 1.6;
+}
+
+.problem-text-box p {
+  margin: 0 0 10px;
+}
+
+@media (max-width: 768px) {
+  .research-problem-container {
+    flex-direction: column;
+  }
+
+  .research-problem-left,
+  .research-problem-right {
+    flex: none;
+    width: 100%;
   }
 }
