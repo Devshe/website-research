@@ -591,3 +591,129 @@ footer {
     width: 100%;
   }
 }
+
+.methodology-container {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+/* Left section with image */
+.methodology-left {
+  flex: 1;
+}
+
+.methodology-image {
+  max-width: 100%;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.figure-caption {
+  text-align: center;
+  margin-top: 5px;
+  font-size: 0.9rem;
+  color: gray;
+}
+
+/* Right section with blue boxes */
+.methodology-right {
+  flex: 1.5;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.blue-box {
+  background-color: #d0e5ff;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: justify;
+  transition: transform 0.3s ease;
+}
+
+.blue-box p {
+  margin: 0;
+  font-size: 1rem;
+  color: #333;
+}
+
+.blue-box:hover {
+  transform: scale(1.02);
+}
+
+.gopher-image {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  max-width: 150px;
+  height: auto;
+  margin: 20px;
+  z-index: 100;
+}
+
+/* Responsive layout for smaller screens */
+@media (max-width: 768px) {
+  .methodology-container {
+    flex-direction: column;
+  }
+
+  .methodology-left,
+  .methodology-right {
+    width: 100%;
+  }
+
+  .gopher-image {
+    position: relative;
+    display: block;
+    margin: 20px auto 0;
+  }
+}
+
+.technologies-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Left and right sections with images */
+.technologies-left,
+.technologies-right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tech-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+/* Hover effect for images */
+.tech-image:hover {
+  transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+  .technologies-container {
+    flex-direction: column;
+  }
+
+  .technologies-left,
+  .technologies-right {
+    width: 100%;
+  }
+
+  .tech-image {
+    max-width: 80%;
+    /* Adjust image size on smaller screens */
+  }
+}
