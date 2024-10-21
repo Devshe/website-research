@@ -498,111 +498,101 @@ const App = () => {
         </div>
       </section>
 
-      <section id="documents" className="section documents">
-        <h2>Documents</h2>
-        <div className="document-list">
-          <h3>Produced Documents</h3>
-          <ul>
-            <li>
-              <a href="#" target="_blank" rel="noopener noreferrer">
-                Project Charter
-              </a>
-            </li>
-            <li>
-              <a href="#" target="_blank" rel="noopener noreferrer">
-                Proposal Document
-              </a>
-            </li>
-            <li>
-              <a href="#" target="_blank" rel="noopener noreferrer">
-                Status Document 1
-              </a>
-            </li>
-            <li>
-              <a href="#" target="_blank" rel="noopener noreferrer">
-                Status Document 2
-              </a>
-            </li>
-            <li>
-              <a href="#" target="_blank" rel="noopener noreferrer">
-                Status Document 3
-              </a>
-            </li>
-            <li>
-              <a href="#" target="_blank" rel="noopener noreferrer">
-                Status Document 4
-              </a>
-            </li>
-          </ul>
-          <h3>Pending Documents</h3>
-          <ul>
-            <li>
-              <a href="#" target="_blank" rel="noopener noreferrer">
-                Final Document - Main
-              </a>
-            </li>
-            <li>
-              <a href="#" target="_blank" rel="noopener noreferrer">
-                Final Document - Part 1
-              </a>
-            </li>
-            <li>
-              <a href="#" target="_blank" rel="noopener noreferrer">
-                Final Document - Part 2
-              </a>
-            </li>
-            <li>
-              <a href="#" target="_blank" rel="noopener noreferrer">
-                Final Document - Part 3
-              </a>
-            </li>
-          </ul>
-        </div>
-      </section>
+      <section id="documents" class="section documents">
+  <h2>Documents</h2>
+  <div class="document-category">
+    <h3>Produced Documents</h3>
+    <div class="document-grid">
+      <div class="document-card">
+        <a href="#" target="_blank" rel="noopener noreferrer">Project Charter</a>
+      </div>
+      <div class="document-card">
+        <a href="#" target="_blank" rel="noopener noreferrer">Proposal Document</a>
+      </div>
+      <div class="document-card">
+        <a href="#" target="_blank" rel="noopener noreferrer">Status Document 1</a>
+      </div>
+      <div class="document-card">
+        <a href="#" target="_blank" rel="noopener noreferrer">Status Document 2</a>
+      </div>
+      <div class="document-card">
+        <a href="#" target="_blank" rel="noopener noreferrer">Status Document 3</a>
+      </div>
+      <div class="document-card">
+        <a href="#" target="_blank" rel="noopener noreferrer">Status Document 4</a>
+      </div>
+    </div>
+  </div>
 
-      <section id="slides" className="section slides">
-        <h2>Slides of Past Presentations</h2>
-        <div className="slide-links">
-          <ul>
-            <li>
-              <a href="#" target="_blank" rel="noopener noreferrer">
-                Proposal Presentation
-              </a>
-            </li>
-            <li>
-              <a href="#" target="_blank" rel="noopener noreferrer">
-                Progress Presentation-1
-              </a>
-            </li>
-            <li>
-              <a href="#" target="_blank" rel="noopener noreferrer">
-                Progress Presentation-2
-              </a>
-            </li>
-            <li>
-              <a href="#" target="_blank" rel="noopener noreferrer">
-                Final Presentation
-              </a>
-            </li>
-          </ul>
-          <h3>Future Presentations</h3>
-          <ul>
-            <li>
-              <a href="#" target="_blank" rel="noopener noreferrer">
-                Upcoming Presentation 1
-              </a>
-            </li>
-            <li>
-              <a href="#" target="_blank" rel="noopener noreferrer">
-                Upcoming Presentation 2
-              </a>
-            </li>
-          </ul>
-        </div>
-      </section>
+  <div class="document-category">
+    <h3>Pending Documents</h3>
+    <div class="document-grid">
+      <div class="document-card">
+        <a href="#" target="_blank" rel="noopener noreferrer">Final Document - Main</a>
+      </div>
+      <div class="document-card">
+        <a href="#" target="_blank" rel="noopener noreferrer">Final Document - Part 1</a>
+      </div>
+      <div class="document-card">
+        <a href="#" target="_blank" rel="noopener noreferrer">Final Document - Part 2</a>
+      </div>
+      <div class="document-card">
+        <a href="#" target="_blank" rel="noopener noreferrer">Final Document - Part 3</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="slides" class="section slides">
+  <h2>Slides of Past Presentations</h2>
+  <div class="document-category">
+    <h3>Past Presentations</h3>
+    <div class="document-grid">
+      <div class="document-card">
+        <a href="#" target="_blank" rel="noopener noreferrer">Proposal Presentation</a>
+      </div>
+      <div class="document-card">
+        <a href="#" target="_blank" rel="noopener noreferrer">Progress Presentation-1</a>
+      </div>
+      <div class="document-card">
+        <a href="#" target="_blank" rel="noopener noreferrer">Progress Presentation-2</a>
+      </div>
+      <div class="document-card">
+        <a href="#" target="_blank" rel="noopener noreferrer">Final Presentation</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="document-category">
+    <h3>Future Presentations</h3>
+    <div class="document-grid">
+      <div class="document-card">
+        <a href="#" target="_blank" rel="noopener noreferrer">Upcoming Presentation 1</a>
+      </div>
+      <div class="document-card">
+        <a href="#" target="_blank" rel="noopener noreferrer">Upcoming Presentation 2</a>
+      </div>
+    </div>
+  </div>
+</section>
+
 
       <section id="about-us" className="section about-us">
         <h2>About Us</h2>
+        <div className="supervisors">
+          <h3>Supervisors</h3>
+          <ul>
+            <li>
+              <p>Name: Prof. Anuradha Karunasena</p>
+              <p>Email: anuradha.k@sliit.lk</p>
+            </li>
+            <li>
+              <p>Name: Ms. Samanthi E.R Siriwardana</p>
+              <p>Email: Samanthi.s@sliit.lk</p>
+            </li>
+          </ul>
+        </div>
+        <br />
         <div className="group-members">
           <h3>Group Members</h3>
           <ul>
@@ -612,8 +602,8 @@ const App = () => {
                 alt="Group Member 1"
                 className="member-photo"
               />
-              <p>Name: John Doe</p>
-              <p>Email: johndoe@example.com</p>
+              <p>Name: M.S.M. Shifan </p>
+              <p>Email: shifan611@gmail.com</p>
             </li>
             <li>
               <img
@@ -621,8 +611,8 @@ const App = () => {
                 alt="Group Member 2"
                 className="member-photo"
               />
-              <p>Name: Jane Smith</p>
-              <p>Email: janesmith@example.com</p>
+              <p>Name: A.M.Y. Laksara</p>
+              <p>Email: amylaksara@gmail.com</p>
             </li>
             <li>
               <img
@@ -630,8 +620,8 @@ const App = () => {
                 alt="Group Member 3"
                 className="member-photo"
               />
-              <p>Name: Mark Johnson</p>
-              <p>Email: markjohnson@example.com</p>
+              <p>Name: A.D.S. Perera</p>
+              <p>Email: sheroniperera20@gmail.com </p>
             </li>
             <li>
               <img
@@ -639,40 +629,20 @@ const App = () => {
                 alt="Group Member 4"
                 className="member-photo"
               />
-              <p>Name: Emily Davis</p>
-              <p>Email: emilydavis@example.com</p>
+              <p>Name: G.D.A.K. Perera</p>
+              <p>Email: akalankaperera128@gmail.com </p>
             </li>
           </ul>
         </div>
-        <div className="supervisors">
-          <h3>Supervisors</h3>
-          <ul>
-            <li>
-              <p>Name: Dr. Alan Brown</p>
-              <p>Email: alanbrown@example.com</p>
-            </li>
-            <li>
-              <p>Name: Dr. Susan Green</p>
-              <p>Email: susangreen@example.com</p>
-            </li>
-            <li>
-              <p>Name: Dr. Michael White</p>
-              <p>Email: michaelwhite@example.com</p>
-            </li>
-            <li>
-              <p>Name: Dr. Laura Black</p>
-              <p>Email: laurablack@example.com</p>
-            </li>
-          </ul>
-        </div>
+       
       </section>
 
       <section id="contact-us" className="section contact-us">
         <h2>Contact Us</h2>
         <div className="general-contacts">
           <h3>General Contacts</h3>
-          <p>Phone: +1 (123) 456-7890</p>
-          <p>Email: generalcontact@example.com</p>
+          {/* <p>Phone: +1 (123) 456-7890</p> */}
+          <p>Email: shifan611@gmail.com</p>
         </div>
       </section>
     </div>
